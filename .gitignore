@@ -4,7 +4,11 @@
 /node_modules
 /.pnp
 .pnp.js
-
+.App.test.js
+.yarn.lock
+.yarn-error.log
+.logo.svg
+.setupTests.js
 # testing
 /coverage
 
