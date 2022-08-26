@@ -7,6 +7,7 @@ import SuperheroesPage from './components/Superheroes.page'
 import HomePage from './components/Home.page'
 import Form from './components/Form'
 import Form2 from './components/Form2'
+import DatePick from './components/DatePick'
 const queryClient = new QueryClient()
 const App = () => {
   console.log(queryClient)
@@ -31,6 +32,9 @@ const App = () => {
               <li>
                 <Link to='/form2'>Form-2</Link>
               </li>
+              <li>
+                <Link to='/date-picker'>Date-Picker</Link>
+              </li>
             </ul>
           </nav>
           <Routes>
@@ -39,6 +43,7 @@ const App = () => {
             <Route path='/' element={<HomePage />} />
             <Route path='/form' element={<Form />} />
             <Route path='/form2' element={<Form2 />} />
+            <Route path='/date-picker' element={<DatePick />} />
           </Routes>
         </div>
       </Router>
