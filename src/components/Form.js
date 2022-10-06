@@ -75,3 +75,69 @@ const Form = () => {
 }
 
 export default Form
+// import "./App.css";
+// import { useForm, useFieldArray, useWatch } from "react-hook-form";
+
+// const Price = ({ control, index }) => {
+//   const value = useWatch({
+//     control,
+//     name: `items[${index}]`,
+//     defaultValue: {},
+//   });
+//   console.log(value);
+//   // eslint-disable-next-line no-const-assign
+
+//   return <span>{(value.type || 0) * (value.amount || 0)} </span>;
+// };
+
+// const PriceTotal = ({ control }) => {
+//   const value = useWatch({
+//     control,
+//     name: `items`,
+//     defaultValue: {},
+//   });
+//   console.log(value);
+//   return null;
+// };
+
+// function App() {
+//   const { register, control, handleSubmit, watch } = useForm();
+//   const { fields, append, remove } = useFieldArray({
+//     control,
+//     name: "items",
+//   });
+//   console.log("...render");
+//   return (
+//     <form className="App" onSubmit={handleSubmit(console.log)}>
+//       {fields.map(({ id, name, type, amount }, index) => {
+//         return (
+//           <div key={id}>
+//             <input {...register(`items[${index}].name`)} defaultValue={name} />
+//             <select {...register(`items[${index}].type`)} defaultValue={type}>
+//               <option value="1">Select</option>
+//               <option value="12">ItemA</option>
+//               <option value="123">ItemB</option>
+//             </select>
+
+//             <input
+//               {...register(`items[${index}].amount`)}
+//               type="number"
+//               defaultValue={amount}
+//             />
+//             <Price control={control} index={index} />
+//             <PriceTotal control={control} />
+//             <button {...register} type="button" onClick={() => remove(index)}>
+//               Delete
+//             </button>
+//           </div>
+//         );
+//       })}
+
+//       <button type="button" onClick={() => append({})}>
+//         Append
+//       </button>
+//     </form>
+//   );
+// }
+
+// export default App;
